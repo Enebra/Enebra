@@ -1,0 +1,8 @@
+User-agent: Yandex 
+Host: http://enebra.org
+
+User-agent: GoogleBot
+Host: http://enebra.org
+
+User-agent: *
+Host: http://enebra.org
