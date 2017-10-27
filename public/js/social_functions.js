@@ -1,10 +1,5 @@
 $( document ).ready(function() {
-  
-  $.ajaxSetup({
-              
-            headers: {  'X-CSRF-TOKEN': $('meta[name="_token"]').attr('content') }
-            
-            });  
+    
 
  $('[data-toggle="tooltip"]').tooltip();
 
@@ -128,22 +123,12 @@ $( document ).ready(function() {
         $(this).toggleClass('collapsed');
         $(this).parent().find('.block-collapse').slideToggle();
     });
-
+ 
 
 
 });
 
 
-function create_messages( obj )
-{
-    toastr.clear();
-
-    var data  = JSON.parse( obj.responseText );
-
-    for (value in data )
-        toastr.error( data[value] ) ;
-
-}
 
 
 function create_request( fields )
@@ -156,3 +141,4 @@ function create_request( fields )
 
     return data;
 }
+

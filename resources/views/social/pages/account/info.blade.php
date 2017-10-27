@@ -36,7 +36,7 @@
                                         <div class="form-group row">
                                             <label for="ex1" class="col-md-4 col-sm-4 col-xs-4 col-form-label pers100">{{Lang::get('user.lang')}}</label>
                                             <div class="col-md-3 col-sm-3 col-xs-8 pers100 col-form-input no-pad">
-                                                <select class="select edit-account-field" name="lang_id">
+                                                <select class="select edit-account-field" name="language_id">
                                                      @foreach(\App\Models\Language::all() as $lang )
                                                         <option value="{{$lang -> id}}" {{ $lang -> id == $user -> language_id ? 'selected' : '' }} >{{$lang -> title}}</option>
                                                      @endforeach

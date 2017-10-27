@@ -94,6 +94,8 @@
 
 		'up'				=> 'Up',
 
-		'close'				=> 'Close'
+		'close'				=> 'Close',
+
+        'saved'             => 'Saved.'
 
 		];

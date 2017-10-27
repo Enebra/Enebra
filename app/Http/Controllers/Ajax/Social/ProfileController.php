@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers\Ajax\Social;
 
+use Lang;
+
 use Request;
 
 use Response;
@@ -9,6 +11,8 @@ use Response;
 use Validator;
 
 use Carbon\Carbon;
+
+use App\Models\User;
 
 use App\Models\User_follower;
 
@@ -32,6 +36,11 @@ class ProfileController extends SocialController
 
         if( $validator !== true )
             return $validator;
+
+        User::whereId( $this -> data['user'] -> id )->update( $this -> request );
+
+
+        return response() -> json( Lang::get('app.saved') );
 
         
 

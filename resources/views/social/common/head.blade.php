@@ -6,4 +6,5 @@
     <title>{{$meta -> title }}</title>
     <link href="{{ asset('css/jquery-ui.css')}}" rel="stylesheet"/>
     <link href="{{ asset('css/bootstrap.css')}}" rel="stylesheet"/>
+    <link href="{{ asset('css/toastr.min.css')}}" rel="stylesheet"/>
     <link href="{{ asset('css/styles.css')}}" rel="stylesheet"/>

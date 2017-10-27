@@ -10,7 +10,11 @@
     <script src="{{ asset('js/jquery.mousewheel.js')}}"></script>
 
     <script src="{{ asset('js/bootstrap.min.js')}}"></script>
-  
+
+    <script src="{{ asset('js/toastr.min.js')}}"></script>
+
+    <script src="{{ asset('js/scripts.js')}}"></script>
+
     <script src="{{ asset('js/social_functions.js')}}"></script>  
 
     <script src="{{ asset('js/user.js')}}"></script>  

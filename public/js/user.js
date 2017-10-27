@@ -56,6 +56,8 @@ var user = {
 
 
 
+            loader.show();
+
             $.ajax({
 
                 url 		: '/account/edit',
@@ -70,7 +72,16 @@ var user = {
                 {
 
 
-                }
+                    loader.hide();
+
+                    toastr.clear();
+
+                    toastr.success( obj )  ;
+
+
+                },
+
+				error 		: function ( obj ) { loader.hide(); create_messages( obj )	}
 
             }) ;
         }
