@@ -65,39 +65,30 @@
             </div>
             <div class="col-xs-12 att-title">{{$publication -> publication -> title}}</div>
             <div class="clearfix"></div>
-            <div class="row">
+            <div class="row block_txt">
                <div class="slide">
                   <div class="col-lg-7 col-md-7 col-sm-7">
                      <img class="img-responsive" src="{{$publication -> publication -> picture -> publication()}}"/>
                   </div>
                   <div class="col-lg-5 col-md-5 col-sm-5">{{$publication -> publication -> description}}</div>
                </div>
+               <div class="col-xs-12 text-center"><a class="bl_more_link" href=""><span></span><span></span><span></span></a></div>
             </div>
             <div class="col-xs-12 block-bottom-full">
                <div class="row">
                   <div class="block-bottom">
-                     <ul>
-                        <li  class="co-auth"><img class="img-responsive" data-toggle="tooltip" data-placement="bottom"  title="{{Lang::get('account.co_authors')}}" src="{{asset('img/icons/co-auth.png')}}"/> <span>{{$publication -> publication -> co_authors -> count()}}</span></li>
-                        <li><img class="img-responsive" data-toggle="tooltip" data-placement="bottom"  title="{{Lang::get('account.discus')}}" src="{{asset('img/icons/chat.png')}}"/> {{$publication -> publication -> comments -> count()}}</li>
-                        <li><img class="img-responsive" data-toggle="tooltip" data-placement="bottom"  title="{{Lang::get('account.count_scores')}}" src="{{asset('img/icons/rew.png')}}"/> {{$publication -> publication -> scores}}</li>
-                     </ul>
-                     <ul>
-                        <li><img class="img-responsive" data-toggle="tooltip" data-placement="bottom"  title="{{Lang::get('account.count_views')}}" src="{{asset('img/icons/views.png')}}"/> {{$publication -> publication -> views -> count()}}</li>
-                        <li><img class="img-responsive" data-toggle="tooltip" data-placement="bottom"  title="{{Lang::get('account.thanks')}}" src="{{asset('img/icons/thanks.png')}}"/> {{$publication -> publication -> good() -> count()}}</li>
-                        <li><img class="img-responsive" data-toggle="tooltip" data-placement="bottom"  title="{{Lang::get('account.useless')}}" src="{{asset('img/icons/useless.png')}}"/> {{$publication -> publication -> bad() -> count()}}</li>
-                     </ul>
-
                   @if($publication -> publication -> user_id !== $user -> id )
-                     <div class="bottom-buttons">
-                        <div class="buttons-block">  
-                           <a href="#">{{Lang::get('account.incompetent')}}</a>
-                           <a href="#">{{Lang::get('account.say_unless')}}</a>
-                        </div>
-                        <div class="buttons-block">  
-                           <a href="#">{{Lang::get('account.say_thank')}}</a>
-                           <a href="#">{{Lang::get('account.improve')}}</a>
-                        </div>
-                     </div>
+
+
+                        <ul class="active_info">
+                           <li class="co-auth">
+                              <img class="img-responsive" src="{{asset('social/img/icons/co-auth.png')}}">
+                              <span class="co-auth-span">0</span>
+                           </li>
+                           <li class="active">
+                              <img class="img-responsive" src="{{asset('social/img/icons/chat.png')}}"> 127</li>
+                        </ul>
+                        <a class="block_bottom_btn rmed" href="/social/better-innovation.php">Улучшить</a>
                   @endif
                   </div>
                </div>

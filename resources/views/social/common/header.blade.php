@@ -16,13 +16,13 @@
                      </div>
                      <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
                   </form>
-               </div> 
+               </div>
                <ul class="nav navbar-nav center  hidden-sm hidden-xs">
                   <li class="home"><a href="#"><span></span></a></li>
                   <li><img class="img-responsive user" src="{{asset( $user -> picture -> thumb())}}"/> {{$user -> firstname}}</li>
                   <li>
                      <a href="{{asset('/account/feed')}}">{{Lang::get('account.home')}}
-                     @if($user -> new_publications -> count() !== 0)<span>{{$user -> new_publications -> count()}}</span>@endif</a>
+                     @if($user -> new_publications -> count() !== 0)<span class="main_num">{{$user -> new_publications -> count()}}</span>@endif</a>
                   </li>
                </ul>
                <ul class="nav navbar-nav  hidden-lg hidden-md">
@@ -30,9 +30,9 @@
                   <li><a href="{{asset('account/feed')}}">{{Lang::get('account.home')}} <span>7</span></a></li>
                   <li>
                       @if( strtotime( \Carbon\Carbon::parse( $user -> active_to) -> addMonth() ->toDateTimeString()) > time() )
-                        <img class="img-responsive" src="{{ asset('img/icons/active-status.png')}}"/> {{Lang::get('account.active_by')}} 
-                        {{substr( \Carbon\Carbon::parse( $user -> active_to) -> addMonth()->toDateTimeString(), 0, 10)}} 
-                      @else 
+                        <img class="img-responsive" src="{{ asset('img/icons/active-status.png')}}"/> {{Lang::get('account.active_by')}}
+                        {{substr( \Carbon\Carbon::parse( $user -> active_to) -> addMonth()->toDateTimeString(), 0, 10)}}
+                      @else
                         <img class="img-responsive" src="{{ asset('img/icons/inactive-status.png')}}"/> {{Lang::get('account.inactive')}}
                       @endif
 

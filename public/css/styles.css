@@ -2240,12 +2240,13 @@ body.chronic .ui-menu .ui-menu-item:not(:last-child){border-bottom: 1px solid #8
     .messanger{    right: 0;}
 
 
-
-
-
-
-
 }
-
+.ajax-loader{
+    position: fixed;
+    right: 10px;
+    top: 10px;
+    width: 50px;
+    z-index: 10000;
+}
 
 

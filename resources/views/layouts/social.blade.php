@@ -9,6 +9,7 @@
   </head>
 
   <body class="social">
+    @include('vendor.loader')
 
         <div class="wrapper">
 

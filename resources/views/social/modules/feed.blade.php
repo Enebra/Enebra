@@ -9,6 +9,8 @@
             <span>{{$user -> new_publications( $type -> id ) -> count()}}</span></a>
       </li>
    @endforeach
+       <li><a href="#votes" data-toggle="tab">{{Lang::get('account.votes')}} <span>5</span></a></li>
+       <li><a href="#tenders" data-toggle="tab">{{Lang::get('account.tenders')}} <span>5</span></a></li>
    </ul>
    <div class="tab-content clearfix">
    @foreach( $types as $key => $type)
