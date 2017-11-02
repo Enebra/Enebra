@@ -18,6 +18,12 @@
                @include( $social . '.partials.publications.' . $type -> slug )
       </div>
    @endforeach
+       <div class="tab-pane" id="votes">
+           @include( $social . '.partials.votes')
+       </div>
+       <div class="tab-pane" id="tenders">
+           @include( $social . '.partials.tenders')
+       </div>
    </div>
 </div>
 <div class="col-md-3 hidden-sm hidden-xs">
